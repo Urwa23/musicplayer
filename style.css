@@ -1,0 +1,79 @@
+*{
+    box-sizing: 0;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    /* min-height: 100vh; */
+}
+.firstcontainer{
+    display: flex;
+    min-height: 50vh;
+    
+    /* flex: 1; */
+}
+.secondcontainer{
+    display: flex;
+    min-height: 50vh;
+    
+}
+.box{
+    padding: 60px;
+    /* font-size: 100px; */
+    flex: 1;
+    text-align: center;
+    transition:
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+    justify-content: center;
+    align-content: center;
+
+}
+.box1{
+    background-color:black;
+    /* flex:5 */
+}
+.box2{
+    background-color: red;
+}
+.box3{
+    background-color: yellow;
+}
+.box4{
+    background-color:#FF8C00;
+}
+.box5{
+    background-color:	#9400D3;
+}
+.box6{
+    background-color: #00CED1;
+}
+
+.box>*:nth-child(3){
+    background-color: wheat;
+    
+}
+.box>*:nth-child(2),.box>*:nth-child(3){
+    visibility: hidden;
+    font-size: 2rem;
+    color:white;
+}
+
+.box.class-active>*:nth-child(2),.box.class-active>*:nth-child(3){
+    visibility: visible;
+}
+.box.open{
+    flex: 5;
+}
+.box>*:first-child{
+    font-size: 4rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box.class-active>*:first-child{
+    visibility: hidden;
+}
